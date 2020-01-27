@@ -20,10 +20,15 @@ const ItemSchema = new Schema(
       required: true
     },
     price: {
-      type: Number
+      type: String,
+      required: true
     },
     number_in_stock: {
       type: Number,
+      required: true
+    },
+    itemImage: {
+      type: String,
       required: true
     }
   }
@@ -32,7 +37,9 @@ const ItemSchema = new Schema(
 //Virtual for item's url
 ItemSchema
   .virtual('url')
-  .get(() => '/inventory/item/' + this._id)
+  .get(function () {
+    return '/inventory/item/' + this._id
+  })
 
 //Export model
 module.exports = mongoose.model('Item', ItemSchema)
