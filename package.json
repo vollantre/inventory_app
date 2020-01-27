@@ -7,16 +7,23 @@
     "devstart": "nodemon ./bin/www"
   },
   "dependencies": {
+    "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "express-validator": "^6.3.1",
+    "helmet": "^3.21.2",
     "http-errors": "~1.6.3",
     "mongoose": "^5.8.7",
     "morgan": "~1.9.1",
     "multer": "^1.4.2",
-    "nodemon": "^2.0.2",
     "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "engines": {
+    "node": "11.10.0"
   }
 }
